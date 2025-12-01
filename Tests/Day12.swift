@@ -36,6 +36,6 @@ import XCTest
     MMMISSJEEE
     """
     let challenge = Day12(data: testData)
-    XCTAssertEqual(String(describing: challenge.part2()), "1206")
+    XCTAssertEqual(String(describing: try challenge.part2()), "1206")
   }
 }

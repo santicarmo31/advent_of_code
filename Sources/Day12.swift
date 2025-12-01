@@ -11,21 +11,22 @@ struct Day12: AdventDay {
   }
 
   func part1() -> Any {
-    var regions: Set<Region> = []
-    var price: Int = 0
-    for i in 0..<entities.count {
-      for j in 0..<entities.count {
-        let gardenPlot = GardenPlot(row: i, column: j, plant: entities[i][j])
-        if regions.contains(where: { $0.gardenPlots.contains(gardenPlot) }) {
-          continue
-        }
-        let region = self.formRegion(gardenPlot: gardenPlot)
-        regions.insert(region)
-        price += region.fencePrice
-      }
-    }
-
-    return price
+//    var regions: Set<Region> = []
+//    var price: Int = 0
+//    for i in 0..<entities.count {
+//      for j in 0..<entities.count {
+//        let gardenPlot = GardenPlot(row: i, column: j, plant: entities[i][j])
+//        if regions.contains(where: { $0.gardenPlots.contains(gardenPlot) }) {
+//          continue
+//        }
+//        let region = self.formRegion(gardenPlot: gardenPlot)
+//        regions.insert(region)
+//        price += region.fencePrice
+//      }
+//    }
+//
+//    return price
+    PartUnimplemented(day: 12, part: 2)
   }
 
   func part2() throws -> Any {
