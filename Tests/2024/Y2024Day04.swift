@@ -18,7 +18,7 @@ import XCTest
     MAMMMXMMMM
     MXMXAXMASX
     """
-    let challenge = Day04(data: testData)
+    let challenge = Y2024Day04(data: testData)
     XCTAssertEqual(String(describing: challenge.part1()), "18")
   }
 
@@ -35,7 +35,7 @@ import XCTest
     M.M.M.M.M.
     ..........
     """
-    let challenge = Day04(data: testData)
+    let challenge = Y2024Day04(data: testData)
     XCTAssertEqual(String(describing: challenge.part2()), "9")
   }
 }

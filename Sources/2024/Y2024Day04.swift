@@ -5,7 +5,7 @@ struct Position: Equatable {
   let row: Int
 }
 
-struct Day04: AdventDay {
+struct Y2024Day04: AdventDay {
   // Save your data in a corresponding text file in the `Data` directory.
   var data: String
 

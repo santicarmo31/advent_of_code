@@ -12,12 +12,12 @@ import XCTest
 
   /*@Test*/ func testPart1() async throws {
     let expectedValues = "[[1, 5], [4, 6]]"
-    let challenge = Day01(data: testData)
+    let challenge = Y2024Day01(data: testData)
     XCTAssertEqual(String(describing: challenge.part1()), expectedValues)
   }
 
   /*@Test*/ func testPart2() async throws {
-    let challenge = Day01(data: testData)
+    let challenge = Y2024Day01(data: testData)
     XCTAssertEqual(String(describing: challenge.part2()), "0")
 //        #expect(String(describing: challenge.part2()) == "32000")
   }

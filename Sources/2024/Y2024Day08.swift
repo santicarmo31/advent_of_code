@@ -1,7 +1,7 @@
 import Algorithms
 import Foundation
 
-struct Day08: AdventDay {
+struct Y2024Day08: AdventDay {
   // Save your data in a corresponding text file in the `Data` directory.
   var data: String
 
@@ -78,11 +78,11 @@ struct Day08: AdventDay {
   }
 }
 
-extension Day08 {
+extension Y2024Day08 {
   private struct Position: Comparable, Hashable, CustomStringConvertible {
     let row, column: Int
 
-    static func < (lhs: Day08.Position, rhs: Day08.Position) -> Bool {
+    static func < (lhs: Y2024Day08.Position, rhs: Y2024Day08.Position) -> Bool {
       return lhs.row < rhs.row || (lhs.row == rhs.row && lhs.column < rhs.column)
     }
 

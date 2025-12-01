@@ -37,12 +37,12 @@ import XCTest
     """
 
   /*@Test*/ func testPart1() async throws {
-    let challenge = Day05(data: testData)
+    let challenge = Y2024Day05(data: testData)
     XCTAssertEqual(String(describing: challenge.part1()), "143")
   }
 
   /*@Test*/ func testPart2() async throws {
-    let challenge = Day05(data: testData)
+    let challenge = Y2024Day05(data: testData)
     XCTAssertEqual(String(describing: challenge.part2()), "123")
   }
 }

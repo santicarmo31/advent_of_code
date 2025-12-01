@@ -1,7 +1,7 @@
 import Algorithms
 import Foundation
 
-struct Day03: AdventDay {
+struct Y2024Day03: AdventDay {
   // Save your data in a corresponding text file in the `Data` directory.
   var data: String
 
@@ -16,7 +16,7 @@ struct Day03: AdventDay {
   }
 }
 
-extension Day03 {
+extension Y2024Day03 {
   func calculateMultiplications(from data: String) -> Int {
     let scanner = Scanner(string: data)
     let initialPattern = "mul("

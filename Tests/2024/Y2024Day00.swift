@@ -26,13 +26,13 @@ struct Day00Tests {
     """
 
   /*@Test*/ func testPart1() async throws {
-    let challenge = Day00(data: testData)
+    let challenge = Y2024Day00(data: testData)
     //    #expect(String(describing: challenge.part1()) == "6000")
     XCTAssertEqual(String(describing: challenge.part1()), "6000")
   }
 
   /*@Test*/ func testPart2() async throws {
-    let challenge = Day00(data: testData)
+    let challenge = Y2024Day00(data: testData)
     //    #expect(String(describing: challenge.part2()) == "32000")
     XCTAssertEqual(String(describing: challenge.part2()), "32000")
   }

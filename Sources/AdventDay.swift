@@ -10,6 +10,7 @@ protocol AdventDay: Sendable {
   /// You can implement this property, or, if your type is named with the
   /// day number as its suffix (like `Day01`), it is derived automatically.
   static var day: Int { get }
+  static var year: Int { get }
 
   /// An initializer that uses the provided test data.
   init(data: String)
@@ -43,8 +44,28 @@ extension AdventDay {
     return day
   }
 
+  static var year: Int {
+    let typeName = String(reflecting: Self.self)
+    guard let i = typeName.firstIndex(where: { $0.isNumber }),
+          let j = typeName[i...].firstIndex(where: { !$0.isNumber }),
+          let year = Int(typeName[i..<j])
+    else {
+      fatalError(
+        """
+        Year number not found in type name: \
+        implement the static `year` property \
+        or use the year number as your type's prefix (like `Y2024`).")
+        """)
+    }
+    return year
+  }
+
   var day: Int {
     Self.day
+  }
+
+  var year: Int {
+    Self.year
   }
 
   // Default implementation of `part2`, so there aren't interruptions before
@@ -64,7 +85,7 @@ extension AdventDay {
     let dataURL = Bundle.module.url(
       forResource: dataFilename,
       withExtension: "txt",
-      subdirectory: "Data")
+      subdirectory: "Data/\(year)")
 
     guard let dataURL,
       let data = try? String(contentsOf: dataURL, encoding: .utf8)

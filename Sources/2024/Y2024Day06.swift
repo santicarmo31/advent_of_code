@@ -1,7 +1,7 @@
 import Algorithms
 import Foundation
 
-extension Day06 {
+extension Y2024Day06 {
   private enum Direction {
     case up, down, left, right
 
@@ -20,7 +20,7 @@ extension Day06 {
   }
 }
 
-struct Day06: AdventDay {
+struct Y2024Day06: AdventDay {
   // Save your data in a corresponding text file in the `Data` directory.
   var data: String
 
